@@ -9,6 +9,11 @@ class TodoForm extends Component {
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
+  handleCompleted = e => {
+    e.preventDefault();
+    this.props.clearCompleted();
+  };
+
   handleSubmit = e => {
     e.preventDefault();
     if (this.state.input)
@@ -29,7 +34,7 @@ class TodoForm extends Component {
         <button type="submit">
           ＋
         </button>
-        <button onClick={this.props.clearCompleted}>
+        <button onClick={this.handleCompleted}>
           －
         </button>
       </form>
