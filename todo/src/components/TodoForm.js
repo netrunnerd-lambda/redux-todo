@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addTodo, clearCompleted } from '../actions';
+import { addTodo, clearCompleted } from '../store/actions';
 
 class TodoForm extends Component {
   state = {

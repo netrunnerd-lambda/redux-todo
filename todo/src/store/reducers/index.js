@@ -2,16 +2,16 @@ import { ADD_TODO,
          CLEAR_COMPLETED,
          MARK_COMPLETE } from '../actions/actionTypes';
 
-const initialState = JSON.parse(window.localStorage.getItem('todos')) || [];
-    
-const todos = (state = initialState, action) => {
+const todos = (state = [], action) => {
   switch(action.type) {
     case ADD_TODO:
+      const { id, completed, text } = action;
+
       return [
         {
-          id: Date.now(),
-          completed: false,
-          text: action.text
+          id,
+          completed,
+          text
         },
         ...state
       ];
