@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: rgb(245, 245, 245);
+  font-family: 'Quicksand', sans-serif;
+}
+
+#root {
+  margin: 1rem;
+  max-width: 500px;
+}
+
+/*
+ * input
+ */
+
+.input {
+  background: black;
+  border: 1px solid black;
+  color: white;
+}
+
+.input input,
+.input button {
+  background: inherit;
+  border: none;
+  color: inherit;
+  padding: 0.5rem;
+}
+
+.input input {
+  width: 75%;
+}
+
+.input button {
+  background: #257147;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 12.5%;
+}
+
+.input button:hover {
+  background: seagreen;
+}
+
+.input button:last-child {
+  background: #a00e2b;
+}
+
+.input button:last-child:hover {
+  background: crimson;
+}
+
+/*
+ * todos
+ */
+
+.todo {
+  background: white;
+  border: 1px solid darkgrey;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  transition: 0.5s;
+}
+
+.todo-complete {
+  background: black;
+  border-color: black;
+}
